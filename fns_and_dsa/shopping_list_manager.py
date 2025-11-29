@@ -33,4 +33,4 @@ def shopping_list_manager():
             break
         else:
             print("Invalid choice. Please try again.")    
-print(shopping_list_manager())
+print(f"{shopping_list_manager()}")
