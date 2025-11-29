@@ -9,7 +9,6 @@ def shopping_list_manager():
     while True:
         display_menu()
         choice = input("Enter your choice 1-4: ").strip()
-
         if choice == '1':
             item = input("Enter the item to add: ").strip()
             shopping_list.append(item)
