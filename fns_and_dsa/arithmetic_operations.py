@@ -1,4 +1,4 @@
-def perform_operation () :
+def perform_operation (num1, num2, operation):
     """Performs a simple arithmetic operation and returns the result."""
     num1 = float(input("Enter the first number: "))
     num2 = float(input("Enter the second number: "))
@@ -16,5 +16,5 @@ def perform_operation () :
             return "Error: Division by zero is not allowed."
     else:
         return "Error: Invalid operation."
-result = perform_operation()
+result = perform_operation('num1', 'num2', 'operation')
 print(f"Result: {result}")
