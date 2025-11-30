@@ -1,5 +1,5 @@
 import datetime 
- 
+from datetime import date
 def display_current_datetime():
     current_date = datetime.datetime.now()
     return current_date.strftime("Current date and time: %Y-%m-%d %H:%M:%S")
