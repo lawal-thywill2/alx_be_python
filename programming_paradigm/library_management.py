@@ -20,14 +20,13 @@ class Book:
     
 class Library:
     def __init__(self):
-        self.books = []
+        self._books = []
         
         
     def add_book(self, book):
-        self.books.append(book)
-
+        self._books.append(book)
     def find_book(self, title):
-        for book in self.books:
+        for book in self._books:
             if book.title == title:
                 return book
         return None
@@ -40,25 +39,23 @@ class Library:
 
 
     def list_available_books(self):
-        for book in self.books:
+        for book in self._books:
             if book.is_available:
                 print(book)
 
 
     def check_out_book(self, title):
         book = self.find_book(title)
-        if book and book.is_available:
-            book.is_available = False
-            return True
+        if book:
+            return book.check_out()
         return False
     
     def return_book(self, title):
-        for book in self.books:  # Assuming self.books is a list of Book instances
-            if book.title == title:
-                if not book.is_available:
-                    book.is_available = True
-                    print(f"Book '{title}' has been returned.")
-                else:
-                    print(f"Book '{title}' is already available.")
-                return
-        print(f"Book '{title}' not found in the library.")
+        book = self.find_book(title)
+        if book:
+            if book.return_book():
+                print(f"Book '{title}' has been returned.")
+            else:
+                print(f"Book '{title}' is already available.")
+        else:
+            print(f"Book '{title}' not found in the library.")
