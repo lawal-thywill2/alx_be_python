@@ -11,5 +11,5 @@ def main():
 
     result = safe_divide(numerator, denominator)
     print(result)
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
