@@ -1,3 +1,6 @@
+import math
+print(math.pi)
+
 class Shape:
     def area(self):
         raise NotImplementedError("Subclasses must implement this method")
