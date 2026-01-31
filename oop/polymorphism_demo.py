@@ -1,5 +1,4 @@
 import math
-print(math.pi)
 
 class Shape:
     def area(self):
@@ -18,4 +17,4 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return 3.141592653589793 * self.radius * self.radius
+        return math.pi * self.radius ** 2
